@@ -1,0 +1,76 @@
+
+
+\documentclass[10pt, onecolumn]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{lmodern}% http://ctan.org/pkg/lm
+\usepackage{enumitem}
+
+
+% use Unicode characters
+% try changing the option if you run into troubles with special characters
+% (e.g. umlauts)
+\usepackage[utf8x]{inputenc}
+% hyperref makes references clicky.
+\usepackage{nameref}
+% line numbers
+\usepackage[right]{lineno}
+% improves typesetting in LaTeX
+% \usepackage{microtype}
+% degree symbol
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{empheq}
+\usepackage{booktabs}
+\usepackage[numbers,super]{natbib}
+\usepackage{hyperref}
+
+% use adjustwidth environment to exceed text width (see examples in text)
+\usepackage{changepage}
+
+% adjust caption style
+\usepackage[aboveskip=1pt,labelfont=bf,
+            labelsep=period,singlelinecheck=off]{caption}
+
+% remove brackets from references
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+\usepackage[colorinlistoftodos]{todonotes}
+
+\newcounter{ProblemNum}
+\newcounter{SubProblemNum}[ProblemNum]
+
+\renewcommand{\theProblemNum}{\arabic{ProblemNum}}
+\renewcommand{\theSubProblemNum}{\alph{SubProblemNum}}
+
+
+\newcommand*{\anyproblem}[1]{\newpage\subsection*{#1}}
+\newcommand*{\problem}[1]{\stepcounter{ProblemNum} %
+   \anyproblem{Problem \theProblemNum. \ #1}}
+\newcommand*{\soln}[1]{\subsubsection*{#1}}
+\newcommand*{\solution}{\soln{Solution}}
+\renewcommand*{\part}{\stepcounter{SubProblemNum} %
+  \soln{Part (\theSubProblemNum)}}
+
+\renewcommand{\theenumi}{(\alph{enumi})}
+\renewcommand{\labelenumi}{\theenumi}
+\renewcommand{\theenumii}{\roman{enumii}}
+
+\newcommand{\points}[1]{{\color{blue} \subsubsection*{Points} #1}}
+
+
+\title{Homework 1, bi183}
+\author{David Angeles}
+
+\begin{document}
+\maketitle
+
+\problem{How many genomes in GenBank?}
+Going to the GenBank URL
+\url{https://www.ncbi.nlm.nih.gov/genome/browse#!/prokaryotes/}, gives the
+number 129209 genomes availabe for download
+
+\problem{Codon Usage}
+
+\end{document}
