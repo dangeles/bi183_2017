@@ -99,3 +99,35 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+*.aux
+
+*.fdb_latexmk
+
+*.tex
+
+*.gz
+
+*.gz
+
+*.fls
+
+*.out
+
+input/aml2.csv
+
+input/aml1.csv
+
+input/brainmuscle1.csv
+
+input/brainmuscle2.csv
+
+input/clostridium_bolteae.fa
+
+input/healthy1.csv
+
+*.fa
+
+input/healthy2.csv
+
+input/pset2syndata.csv
